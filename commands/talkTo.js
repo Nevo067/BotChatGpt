@@ -5,11 +5,11 @@ const { API } = require('../config.json');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('talkto')
-        .setDescription('talking to ia with follow-up')
+        .setName('discuter')
+        .setDescription('Faire une discussion avec l\'IA avec un suivi')
         .addStringOption(option => option
             .setName('text')
-            .setDescription('Text send to AI')
+            .setDescription('Envoyer du texte à l\'IA')
             .setRequired(true)),
 
     async execute(interaction)

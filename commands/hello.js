@@ -4,7 +4,7 @@ const { SlashCommandBuilder } = require('discord.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('bonjour')
-        .setDescription('introduce the bot'),
+        .setDescription('Présente le bot'),
 
     async execute(interaction)
     {

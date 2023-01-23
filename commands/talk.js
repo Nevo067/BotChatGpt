@@ -4,11 +4,11 @@ const wait = require('node:timers/promises').setTimeout;
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('talk')
-        .setDescription('talk with ai')
+        .setName('parler')
+        .setDescription('Discuter avec l\'IA')
         .addStringOption(option => option
             .setName('text')
-            .setDescription('Text send to AI')
+            .setDescription('Envoyer du texte à l\'IA')
             .setRequired(true)),
 
     async execute(interaction)
