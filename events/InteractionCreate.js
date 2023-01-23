@@ -8,14 +8,15 @@ module.exports = {
 		const command = interaction.client.commands.get(interaction.commandName);
 
 		if (!command) {
-			console.error(`No command matching ${interaction.commandName} was found.`);
+			console.error(`Aucune commande nommée: "${interaction.commandName}" n'a été trouvée.`);
 			return;
 		}
 
 		try {
 			await command.execute(interaction);
+			await console.log(`La commande ${interaction.commandName} a fonctionné avec succès`);
 		} catch (error) {
-			console.error(`Error executing ${interaction.commandName}`);
+			console.error(`Une erreur a eu lieu avec la commande: "${interaction.commandName}"`);
 			console.error(error);
 		}
 	},
