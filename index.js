@@ -18,7 +18,6 @@ for (const file of eventFiles) {
 	}
 }
 
-
 client.commands = new Collection();
 
 // Read Command Files and folders

@@ -18,7 +18,7 @@ for (const folder of commandFolders) {
 	for (const file of commandFiles) {
 		const command = require(`${commandsPath}/${folder}/${file}`);
 		commands.push(command.data.toJSON());
-		console.log(`Donné de "${file}" envoyées`);
+		console.log(`Données de "${file}" envoyées`);
 	}
 }
 
@@ -32,10 +32,10 @@ const rest = new REST({ version: '10' }).setToken(token);
 
 		// The put method is used to fully refresh all commands in the guild with the current set
 		const data = await rest.put(
-			// Send to one server
-			// Routes.applicationGuildCommands(clientId, guildId),
-			// Send on all servers
-			Routes.applicationCommands(clientId),
+			// Deploy guild-based commands
+			Routes.applicationGuildCommands(clientId, guildId),
+			// Deploy global command
+			// Routes.applicationCommands(clientId),
 			{ body: commands },
 		);
 
