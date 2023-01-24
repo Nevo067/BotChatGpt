@@ -20,11 +20,12 @@ for (const file of eventFiles) {
 
 
 client.commands = new Collection();
-// Read Command Files
 
+// Read Command Files and folders
 const commandsPath = path.join(__dirname, 'commands');
 const commandFolders = fs.readdirSync(commandsPath);
 
+// Find all the command files in the commands directory
 for (const folder of commandFolders) {
 	const commandFiles = fs.readdirSync(`${commandsPath}/${folder}`).filter(file => file.endsWith('.js'));
 	console.log(`**********\nDossier de commandes "${folder}" chargé.`);
