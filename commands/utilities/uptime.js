@@ -13,7 +13,7 @@ module.exports = {
         .setTitle(`__Temps passé depuis le dernier démarrage de ${client.user.username}__`)
         .setColor('#C6A969')
         .setTimestamp()
-        .setFooter({ text: 'uptime', iconURL: client.user.displayAvatarURL()})
+        .setFooter({ text: 'uptime', iconURL: client.user.displayAvatarURL() })
         .addFields(
             { name : 'Durée', value: uptimeText },
         );

@@ -8,7 +8,7 @@ module.exports = {
 		const command = interaction.client.commands.get(interaction.commandName);
 
 		if (!command) {
-			interaction.reply({ content: `La commande "${interaction.commandName}" n\'existe pas` });
+			interaction.reply({ content: `La commande "${interaction.commandName}" n'existe pas` });
 			console.error(`Aucune commande nommée: "${interaction.commandName}" n'a été trouvée.`);
 			return;
 		}
