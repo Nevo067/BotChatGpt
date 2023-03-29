@@ -17,8 +17,6 @@ module.exports = {
     {
         await interaction.deferReply();
         const textToAi = interaction.options.getString('text');
-        console.log(API + 'init');
-        console.log('xxx');
         const result = await axios.post(API + 'init', {
             text:textToAi,
         });
